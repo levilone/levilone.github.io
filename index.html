@@ -1,78 +1,82 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <style>
-body {
-background-color: tan;
+/* setup*/
+* RESET */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-.thickgreenborder {
-border-color: green;
-border-width: 10px;
-border-style: solid;
-border-radius: 50%;
+/* COLORS and FONTS */
+body {
+    color: black;
+    text-align: left;
+    font-size: 16px;
+    line-height: 3;
+    background: forestgreen;
+}
+divbar {
+    background: forestgreen;
+}
+main {
+    background: tan;
+}
+footer {
+    background: forestgreen;
+}
+.left-sidebar {
+    background: forestgreen;
+}
+.right-sidebar {
+    background: forestgreen;
+}
+/* mobile rules */
+.container, 
+.content {
+    display: flex;
+    flex-direction: column;
+}
+/* Desktop rules*/
+@media all and (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    main {
+        flex: 2 70%;
+        order: 2;
+        min-height: 120vh;
+    }
+    .left-sidebar {
+        order: 1;
+        flex: 1 15%;
+    }
+    .right-sidebar {
+        flex: 1 15%;
+        order: 3;
+    }
 }
 </style>
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>index.html</title></head><body>
-<table style="text-align: left; width: 100%;" border="1" cellpadding="2" cellspacing="2">
-  <tbody style="background";>
-    <tr>
-      <td style="vertical-align: top;">Hello, Welcome to My Website<br>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;"><br>
-      <br>
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text bodyoftext body of text bodyoftext body of text
-bodyoftext body of text <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
- <img class="thickgreenborder" src="catpic.jpg" alt="cat picture">
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      </td>
-    </tr>
-    <tr>
-      <td style="vertical-align: top;">copyright<br>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-  <br>
-
-</body></html>
+<html>
+<div class="container">
+        <div class="divbar">
+        <div>HEADER</div>
+        </div>
+        <div class="content">
+             <main>MAIN CONTENT:
+             <ul>
+             	<li><a href="http://192.168.1.179/breakout1.html">breakout</a></li>
+             	<li><a href="http://192.168.1.179/project1.html">project1</a></li>
+             	<li><a href="http://192.168.1.179/project2.html">project2</a></li>
+             	<li><a href="http://192.168.1.179/project3.html">project3</a></li>
+             	<li><a href="http://192.168.1.179/project4.html">project4</a></li>
+             	<li><a href="http://192.168.1.179/project5.html">project5</a></li>
+             	<li><a href="http://192.168.1.179/CatPage.html">CatPage</a></li>
+             </ul>
+             </main>
+             <aside class="left-sidebar">LEFT SIDEBAR</aside>
+             <aside class="right-sidebar">RIGHT SIDEBAR</aside>
+        </div>
+        <footer>FOOTER</footer>
+    </div> 
+    </html>
